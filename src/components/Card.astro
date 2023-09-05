@@ -1,5 +1,7 @@
 ---
 import { css } from 'styled-system/css'
+import {HelloComponent} from "./angular/hello.component";
+
 interface Props {
 	title: string;
 	body: string;
@@ -9,6 +11,8 @@ interface Props {
 const { href, title, body } = Astro.props;
 
 ---
+
+<HelloComponent client:visible/>
 
 <li class="link-card">
 	<a href={href}>
@@ -20,6 +24,7 @@ const { href, title, body } = Astro.props;
 			{body}
 		</p>
 	</a>
+
 </li>
 <style>
 	.link-card {
