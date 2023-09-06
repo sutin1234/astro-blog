@@ -1,20 +1,23 @@
-import { NgIf } from '@angular/common';
+import { CommonModule, NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'app-hello',
     standalone: true,
-    imports: [NgIf],
+    imports: [NgIf, CommonModule],
     template: `
     <p>Hello from Angular!!</p>
-
     <p *ngIf="show">{{ helpText }}</p>
 
-    <button (click)="toggle()">Toggle</button>
+    <button [ngClass]="buttonStyle" (click)="toggle()">Toggle</button>
   `,
 })
 export class HelloComponent {
-    @Input() helpText = 'help';
+
+    @Input() helpText = 'in Angular 16 Standalone';
+    @Input() buttonStyle = ''
+
+
 
     show = false;
 

@@ -19,8 +19,12 @@
     "noEmit": false,
     "target": "es2020",
     "module": "es2020",
-    "lib": ["es2020", "dom"],
-    "skipLibCheck": true
+    "lib": [
+      "es2020",
+      "dom"
+    ],
+    "skipLibCheck": true,
+    "verbatimModuleSyntax": false,
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
@@ -30,5 +34,8 @@
     "allowJs": false
   },
   "files": [],
-  "include": ["src/**/*.ts", "src/**/*.tsx"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ]
 }
